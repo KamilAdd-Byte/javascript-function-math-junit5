@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Js</title>
+	<script>
+		//zmienne globalne
+        var _name;
+        var _age;
+        var _week;
+
+        //proste funkcje JS
+		function welcome(){
+            _name = prompt('What your name?');
+            document.write('<p>');
+            document.write('Witaj ' + _name)
+            document.write('</p>');
+		}
+
+		function howOldYou(){
+		    _age = prompt('How old you?')
+			document.write('Twój wiek to ' + _age)
+			if (_age < 30){
+			    alert(_name + '<strong>' + _age + ' ' + ' Młodyś!!!')
+			}else
+			    alert(_name + ' ' + _age + ' '+ ' Ale stary jesteś !')
+		}
+
+		function week(){
+		    _week = ['Pn','Wt','Śr','Czw','Pt'];
+		    _week.push('Sob','Niedziela');
+            for (let i = 0; i < _week.length; i++) {
+				document.write('Iterowanie po tablicy week: '+'<p>'+_week[i]+' ' + '</p>');
+            }
+		    document.write('<p><strong>Dzień tygodnia: '+_week[6]+'</p>');
+		}
+		//wywołanie funkcji
+        welcome();
+		howOldYou();
+		week();
+	</script>
+</head>
+<body>
+</body>
+</html>

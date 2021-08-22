@@ -5,9 +5,9 @@
 	<title>Js</title>
 	<script>
 		//zmienne globalne
-        var _name;
-        var _age;
-        var _week;
+        let _name;
+        let _age;
+        let _week;
 
         //proste funkcje JS
 		function welcome(){
@@ -34,10 +34,19 @@
             }
 		    document.write('<p><strong>Dzień tygodnia: '+_week[6]+'</p>');
 		}
+
+		function changeColor(){
+		    var enteredColor = prompt('red?');
+		    if (enteredColor === 'red'){
+		        document.body.style.background='red';
+			}
+		}
+
 		//wywołanie funkcji
         welcome();
 		howOldYou();
 		week();
+		changeColor();
 	</script>
 </head>
 <body>

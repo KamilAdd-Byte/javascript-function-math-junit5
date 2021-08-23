@@ -1,5 +1,9 @@
-function welcome(){
-    alert('Java Script on page! :)');
-}
+let yourAge = 36;//number
+let yourName = 'Kamil';//string
+let person = createPerson(yourName,yourAge);//object
+let person2 ={name: 'Kamil',age: 36};//Object
 
-welcome();
+let array = ['apple','banana','oranges'];
+
+console.log(person);
+

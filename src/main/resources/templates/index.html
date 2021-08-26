@@ -4,37 +4,60 @@
 	<meta charset="UTF-8">
 	<title>Js</title>
 	<script>
-		//zmienne globalne
-        let _name;
-        let _age;
-        let _week;
+		// //zmienne globalne
+        // let _name;
+        // let _age;
+        // let _week;
+		//
+        // //proste funkcje JS
+		// function welcome(){
+        //     _name = prompt('What your name?');
+        //     document.write('<p>');
+        //     document.write('Witaj ' + _name)
+        //     document.write('</p>');
+		// }
+		//
+		// function howOldYou(){
+		//     _age = prompt('How old you?')
+		// 	document.write('Twój wiek to ' + _age)
+		// 	if (_age < 30){
+		// 	    alert(_name + '<strong>' + _age + ' ' + ' Młodyś!!!')
+		// 	}else
+		// 	    alert(_name + ' ' + _age + ' '+ ' Ale stary jesteś !')
+		// }
+		//
+		// function week(){
+		//     _week = ['Pn','Wt','Śr','Czw','Pt'];
+		//     _week.push('Sob','Niedziela');
+        //     for (let i = 0; i < _week.length; i++) {
+		// 		document.write('Iterowanie po tablicy week: '+'<p>'+_week[i]+' ' + '</p>');
+        //     }
+		//     document.write('<p><strong>Dzień tygodnia: '+_week[6]+'</p>');
+		// }
 
-        //proste funkcje JS
-		function welcome(){
-            _name = prompt('What your name?');
-            document.write('<p>');
-            document.write('Witaj ' + _name)
-            document.write('</p>');
+
+        /**
+		 * PROTOTYPE JS
+         * @param name value name this object
+         * @param color value name this color
+         * @constructor prototype js new Gadget
+         */
+		function Gadget(name,color){
+		    this.name = name;
+		    this.color = color;
+		    this.hoo = function (){
+		        return 'Jam ' + this.color + ' ' + this.name;
+			}
+		}
+		Gadget.prototype.price = 100;
+		Gadget.prototype.rate = 3;
+
+		Gadget.prototype.info = function (){
+		    return 'Ocena ' + this.rate + ', cena: ' + this.price;
 		}
 
-		function howOldYou(){
-		    _age = prompt('How old you?')
-			document.write('Twój wiek to ' + _age)
-			if (_age < 30){
-			    alert(_name + '<strong>' + _age + ' ' + ' Młodyś!!!')
-			}else
-			    alert(_name + ' ' + _age + ' '+ ' Ale stary jesteś !')
-		}
-
-		function week(){
-		    _week = ['Pn','Wt','Śr','Czw','Pt'];
-		    _week.push('Sob','Niedziela');
-            for (let i = 0; i < _week.length; i++) {
-				document.write('Iterowanie po tablicy week: '+'<p>'+_week[i]+' ' + '</p>');
-            }
-		    document.write('<p><strong>Dzień tygodnia: '+_week[6]+'</p>');
-		}
-
+		var newGadget = new Gadget('kamera','czarna');
+		document.write(newGadget.name + ' ' + newGadget.rate + ' ' + newGadget.hoo());
 		//wywołanie funkcji
         welcome();
 		howOldYou();
